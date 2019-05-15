@@ -1,0 +1,95 @@
+body {
+  background: lightgreen;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  
+}
+.board{
+  background: url(grass.svg);
+  background-size: 5vmin;
+  background-position-y: 5vmin;
+  width: 100vmin;
+  height: 100vmin;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.segment{
+  //background-image: url(grass.svg);
+  //background-size: 100%;
+}
+.wall{
+  background-image: url(bricks.svg);
+  background-size: 150%;
+  border-radius: 2vmin; 
+}
+.diamond{
+  background: gold;
+  border-radius: 5vmin; 
+  animation: spin 7s ease-in infinite;
+  box-shadow: 0vmin 0vmin 5vmin gold;
+}
+.player{
+  background: gray;
+  width: 9vmin;
+  height: 9vmin;
+  border: 0.5vmin dotted black;
+  border-radius: 3vmin; 
+  position: absolute;
+  align-content: center;
+  font-family: Courier, monospace;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.counter {
+  background: transparent;
+  width: 90%;
+  height: 45%;
+  text-align: center;
+  font-size: 4vmin;
+  font-weight: bold;
+}
+.timer {
+  background: transparent;
+  width: 90%;
+  height: 45%;
+  text-align: center;
+  font-size: 3vmin;
+}
+
+.info{  
+  background: lime;
+  width: 90vmin;
+  height: 25vmin;  
+  position: absolute;
+  top: 33vmin;
+  opacity: 0;
+  text-align: center;
+  padding: 5vmin;
+  border-radius: 3vmin; 
+  font-family: Courier, monospace;
+  font-size: 2.5vmin;
+}
+
+@keyframes show {
+  0% {opacity: 0;}
+  20% {opacity: 1;}
+  80% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes spin { 
+  50% { transform:rotateY(180deg); } 
+  100% { transform:rotateY(360deg); } 
+}
+
+@font-face {
+  font-family: myFont;
+  src: url(xxx.woff);
+}
